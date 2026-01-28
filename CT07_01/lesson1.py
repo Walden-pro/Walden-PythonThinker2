@@ -36,17 +36,17 @@
 
 
 
-score = input("Input score: ")
+# score = input("Input score: ")
 
-if score >= 75:
-    print("You got grade A")
+# if score >= 75:
+#     print("You got grade A")
 
-elif score >= 60:
-    print("You got grade B")
-elif score >= 50:
-    print("You got grade C")
-else: 
-    print("You failed")
+# elif score >= 60:
+#     print("You got grade B")
+# elif score >= 50:
+#     print("You got grade C")
+# else: 
+#     print("You failed")
 
 
 

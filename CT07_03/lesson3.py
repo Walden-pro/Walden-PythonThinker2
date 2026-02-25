@@ -87,21 +87,32 @@
 import random
 ans = 0
 lives = 3
-ez = 0
-while ez != 16:
+ez = 2
+while ez != 0:
     onenum = random.randint(2,20)
     twonum = random.randint(2,20)
     ttl = onenum * twonum
     on = str(onenum)
     tn = str(twonum)
-    ans = int(input("what is", str(on) ,"x", str(tn),"?"))
-    if ans == ttl:
-        pass
-        ez =+1
-    else:
-        lives =- 1
-    if lives == -1:
+    ans = int(input("what is "+ str(on) +"x"+str(tn)+"?"))
+    while ans != ttl:
+        lives = lives - 1
+        print("lives: "+str(lives))
+        ans = int(input("what is "+ str(on) +"x"+str(tn)+"?"))
+        if lives == 0:
+            break
+        if ans == ttl:
+            ez = ez - 1
+            print("lives: "+str(lives))
+            break
+        if lives == 0:
+            print("GO AND SEE MS TAN FOR REMEDIAL")
+            break
+    if lives == 0:
         print("GO AND SEE MS TAN FOR REMEDIAL")
+        break
+    if ez == 0:
+        print("Good boy")
         break
 
 

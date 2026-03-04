@@ -4,35 +4,35 @@
 # **Task 1a**:
 # Create a list of 8 planets in the solar system.
 # (Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, Neptune)
-planets = ["mercury", 
-           "venus",
-           "earth",
-           "mars",
-           "jupiter", 
-           "saturn", 
-           "uranus", 
-           "neptune"]
+# planets = ["mercury", 
+#            "venus",
+#            "earth",
+#            "mars",
+#            "jupiter", 
+#            "saturn", 
+#            "uranus", 
+#            "neptune"]
 # print(planets)
 # **Task 1b**:
 # You have conquered Mars, **rename** Mars to a name of
 # your liking
-planets[3] = "ur mars"
+# planets[3] = "ur mars"
 # print(planets)
 # **Task 1c**:
 # 1. You have decided Pluto is a planet again, **add** Pluto
 #    into the list
-planets.append("pluto")
+# planets.append("pluto")
 # print(planets)
 # 2. You created an artificial planet between Earth and
 #    Mars called "Lalaland". **Insert** the planet in
 #    correctly into the list.
-planets.insert(3, "lalaland")
+# planets.insert(3, "lalaland")
 # print(planets)
 # **Task 1d**:
 # You launched a war againts Jupiter and destroyed it,
 # **delete** Jupiter from the list
 ## Task 2: List of planets (part 2)
-planets.pop(5)
+# planets.pop(5)
 # print(planets)
 
 
@@ -111,12 +111,19 @@ planets.pop(5)
 
 f = []
 while True:
-    u = input("what is in menus")
+    u = input("what is in menus: ")
     if u == "end":
         for i in range(len(f)):
-            print("the menu is"+f[i])
-            
+            print("the menu has: "+f[i])
+        break    
     f.append(u)
 
-c = input("what u like")
+c = input("what will you like: ")
+while True:
+    if c in f:
+        print("we have that, pls take a seat now.")
+        break
+    else:
+        print("sorry we dont have that. pls go the next door now")
+        break
 

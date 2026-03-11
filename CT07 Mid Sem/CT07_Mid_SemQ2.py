@@ -41,7 +41,7 @@ while order != "end":
 # 3. Item3
 # ============================================================
 
-
+print("You have ordered the following:")
 for i in range(num_orders-1):
     print(f"{i+1}. {orders[i]}")
 

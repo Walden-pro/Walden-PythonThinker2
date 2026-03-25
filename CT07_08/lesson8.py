@@ -117,26 +117,74 @@
 
 
 #                   task 5 ->
-word = "SINGAPORE"
-print(word[:4])
-print(word[3:6])
-print(word[5:])
-print(word[::2])
+# word = "SINGAPORE"
+# print(word[:4])
+# print(word[3:6])
+# print(word[5:])
+# print(word[::2])
 #                   task 6 ->
 
-user_input = input("input a word: ")
-if user_input == user_input[::-1]:
-    print("it is a palindrome")
-else:
-    print("it is not a palindrome")
+
+# while True:
+#     user_input = input("input a word: ")
+#     if user_input == user_input[::-1]:
+#         print("it is a palindrome")
+#     elif user_input == "end":
+#         break
+#     else:
+#         print("it is not a palindrome")
+
 #                   task 7 ->
-
-
+# fl = ["geng woon", "p","diddy","yihao","elliot"]
+# fp = 0
+# while True:
+#     inputs = input("your name:")
+#     if inputs == "":
+#         print("pls enter a name ")
+#     if inputs in fl:
+#         fp=fp+1
+#         print("you are accepted")
+#     else:
+#         print("your entry was denied get out")
+#     if fp == 5:
+#         print("everybody was here")
+#         break
 
 #                   task 8 ->
+flu = False
+fcv = False
+sdib = False
+nll = False
+
+nric = input("What is the nric that u have")
+if len(nric)!= 9:
+    nll = True
+    if nric[1:8].isalpha():
+        print("the seven characters must be digits.")
+    if nric[0]!="S" or nric[0]!="T" or nric[0]!="F" or nric[0]!="G" or nric[0]!="M":
+        print("first alphabet of nric must be stfgm")
+    if nric[0].islower():
+        print("first alphabet of nric must be upper case")
+    if nric[8].isdigit():
+        print("last letter of nric must be alphabet.")
+    if nric[8].islower():
+        print("last letter of nric must be the upper case")
+    else:
+        print("this is a valid nric")
+    
 
 
 
 #                   task 9 ->
 
+# while True:
+#     un=input("your password: ")
+#     if not un.isalpha() and not un.isdigit() and un.isalnum() and len(un) > 7 and
+        
+#     elif len(un) < 7:
+#         print("length of password is too short")
 
+#     elif un.isalnum():
+#         print("password should contain both alpha and num")
+#     else:
+#         print("password should not contain special character")

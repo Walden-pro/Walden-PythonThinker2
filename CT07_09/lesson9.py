@@ -1,226 +1,12 @@
 
 
-
 # Import libraries
 import turtle
 import time
 import random
 import math
-import sys
-import os
-import json
-import datetime
-import collections
-import re
-import argparse
-import logging
-import inspect
-import glob
-import shutil
-import tempfile
-import numpy as np
-import pandas as pd
-import matplotlib.pyplot as plt
-import seaborn as sns
-import sklearn (or from sklearn import ...)
-import tensorflow as tf
-import torch (for PyTorch)
-import xgboost
-import lightgbm
-import catboost
-import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
-import seaborn as sns
-import plotly.express as px
-import plotly.graph_objects as go
-import scipy
-import statsmodels
-import sklearn
-import dask
-import holoviews
-import bokeh
-import folium
-import altair
-import plotnine
-import networkx
-import sklearn
-import tensorflow as tf
-import torch
-import keras
-import xgboost as xgb
-import lightgbm as lgb
-import catboost
-import transformers
-import pytorch_lightning as pl
-import torch_geometric
-import transformers
-import diffusers
-import datasets
-import langchain
-import spacy
-import nltk
-import gensim
-import stanza
-import tokenizers
-import gym
-import stable_baselines3
-import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
-import seaborn as sns
-import plotly.express as px
-import plotly.graph_objects as go
-import scipy
-import statsmodels
-import sklearn
-import dask
-import holoviews
-import bokeh
-import folium
-import altair
-import plotnine
-import networkx
-Machine Learning and Artificial Intelligence (AI)
-python
-import sklearn
-import tensorflow as tf
-import torch
-import keras
-import xgboost as xgb
-import lightgbm as lgb
-import catboost
-import transformers
-import pytorch_lightning as pl
-import torch_geometric
-import transformers
-import diffusers
-import datasets
-import langchain
-import spacy
-import nltk
-import gensim
-import stanza
-import tokenizers
-import gym
-import stable_baselines3
-Web Development (Backend & Frontend)
-python
-import django
-import flask
-import fastapi
-import pyramid
-import tornado
-import bottle
-import cherrypy
-import streamlit
-import dash
-import sanic
-import gunicorn
-import starlette
-import jinja2
-import wagtail
-import waitress
-Web Scraping and Automation
-python
-import requests
-import scrapy
-import beautifulsoup4
-import selenium
-import playwright
-import urllib3
-import fake_useragent
-import lxml
-import mechanize
-import praw # Reddit API
-Databases and Data Manipulation
-python
-import sqlalchemy
-import mysql.connector
-import psycopg2
-import sqlite3
-import pymongo
-import redis
-import cassandra
-import pyodbc
-import pandas_datareader
-import duckdb
-API and Networking
-python
-import socket
-import http
-import httpx
-import aiohttp
-import websocket
-import feedparser
-import tweepy
-import googleapiclient
-import smtplib
-import oauthlib
-File Handling, Data Parsing, and Utility
-python
-import os
-import sys
-import json
-import csv
-import re
-import math
-import datetime
-import io
-import shutil
-import pathlib
-import openpyxl # Excel
-import xlrd
-import pypdf
-import Pillow # PIL
-import pydantic
-import yaml
-import configparser
-import requests_toolbelt
-import zipfile
-import tarfile
-DevOps, Testing, and System Admin
-python
-import subprocess
-import logging
-import argparse
-import unittest
-import pytest
-import mock
-import coverage
-import tqdm # Progress Bars
-import rich # Terminal Formatting
-import loguru # Logging
-import croniter
-import docker
-import ansible
-import fabric
-import celery
-import supervisor
-Others/General Purpose
-python
-import random
-import time
-import uuid
-import hashlib
-import pickle
-import base64
-import functools
-import itertools
-import multiprocessing
-import threading
-Top 10 Fundamental Libraries (Shortlist)
-python
-import os
-import sys
-import pandas as pd
-import numpy as np
-import requests
-import json
-import matplotlib.pyplot as plt
-import sklearn
-import datetime
-import re
+
+
 #global variables
 screen=turtle.Screen()
 t = turtle.Turtle()
@@ -232,7 +18,7 @@ def sq(size):  #draw square
     for i in range(4):
         t.forward(size)
         t.right(90)
-
+    t.penup()
 def done():
     turtle.done()
 def f(length):
@@ -248,30 +34,115 @@ def polygon(length,sides):
     for i in range(sides):
         t.forward(length)
         t.right(360/sides)
+    t.penup()
 
-# main code ig
+
+# main code
 t.pu()
-t.speed(14214432432423435354345436654768796879080956578675876543765432876543876543765432176548765456479768762143231241354565786980675342453745425)
+t.speed(0)
+t.goto(0,0)
 
-t.goto(0,100)
 t.pd()
 
-# length = int(screen.textinput("length","Enter length: "))#1 lowest
-# sides = int(screen.textinput("sides", "enter sides: "))#2000 maximum
+
+
+
+
+
+
+# done()
+
+# ## Task 2: Square in a Square
+# Use a function with parameters to draw 7 squares inside each other, getting smaller and smaller.
+
+# 1. Import the ‘turtle’ library
+# 2. Create a 400x400 screen
+# 3. Create a function “draw_square” with a “size” parameter
+# 4. The “draw_square” function will draw a square of size*size around the (0,0) coordinate.
+# 5. Within a ‘for’ loop, use the “draw_square” function you have created to draw 7 squares around the (0,0) coordinate with the following sizes: 50, 100, 150, 200, 250, 300, 350
+# t.seth(0)
+# size = 350
+# for i in range(7):
+#     t.penup()
+#     t.goto(-size/2,size/2)
+#     t.pendown()
+#     sq(size)
+#     size = size - 50
+
+# turtle.done()
+
+# ## Task 3: Shape Creator
+# You want to create a shape creator program that will draw any shape you want simply by giving the program the length and number of sides that the shape must have.
+
+# To do this, you need to create a function with 2 parameters:
+# - ‘length’
+# - ‘num_sides’
+
+# 1. Create a function called draw_shape() that takes in the length of the sides, as well as the number of sides.
+# 2. The function should draw a shape with the length of sides and number of sides given by calculating the exterior angle
+# 3. Using the  draw_shape() function, draw the following:
+# - Pentagon, Hexagon, Octagon and Decagon
+
+
+# length = int(screen.textinput("length","Enter length: "))
+# sides = int(screen.textinput("sides", "enter sides: "))
 # polygon(length,sides)
 
+# modify the functions such that the perimeter is the same
 
-t.seth(180)
-t.forward(100)
-t.seth(60)
-t.forward(100)
-t.seth(-60)
-t.forward(100)
-t.seth(180)
-t.forward(100)
-t.seth(0)
-sq(100)
+# def polygonsame(perimeter,sides):
+#     t.seth(0)
+#     t.pendown()
+#     length = perimeter / sides
+#     for i in range(sides):
+#         t.forward(length)
+#         t.right(360/sides)
+#     t.penup()
+
+# perimeter = int(screen.textinput("Perimeter","Enter perimeter: "))
+# sides = int(screen.textinput("sides", "enter sides: "))
+# polygonsame(perimeter,sides)
 
 
-done()
+# ## Task 4: Drawing a House
+# You have been tasked to draw a house (made of a square and a triangle)
 
+# Using the ‘draw_shape’ function you have just created, create a house by first drawing a square, then a triangle above the square.
+# 1. The house is made up of a 100x100 square and a triangle that is 100 units long each side.
+# 2. The triangle must be connected to the square
+
+# You may refer to the following as a guide:
+# 1. Import ‘turtle’ library
+# 2. Set up a window
+# 3. Create a turtle object and lift the pen to move without drawing
+# 4. Define ‘draw_shape’ function to draw a regular polygon based on specified length and number of sides
+# 5. Define ‘draw_house’ function that uses the ‘draw_shape’ function to combine a square and a triangle
+
+def draw_shape(length,sides):
+    t.seth(0)
+    t.pendown()
+    for i in range(sides):
+        t.forward(length)
+        t.left(360/sides)
+    t.penup()
+
+def draw_house(x,y):
+    t.penup()
+    t.goto(x,y)
+    t.pendown()
+    draw_shape(100,4)
+    t.goto(x,y+100)
+    draw_shape(100,3)
+    # t.seth(180)
+    # t.forward(100)
+    # t.seth(60)
+    # t.forward(100)
+    # t.seth(-60)
+    # t.forward(100)
+    # t.seth(180)
+    # t.forward(100)
+    # t.seth(0)
+    # sq(100)
+draw_house(20,50)
+
+turtle.done()

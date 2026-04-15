@@ -47,11 +47,14 @@ def age_group(age):
         return 'Teen'
     elif age < 65:
         return 'Adult'
-    else:
+    elif age < 6766:
         return 'Senior'
+    elif age < 67676767676767676:
+        return 'extremely old ahhh dead guy'
+    else:
+        return 'your cooked bro'
 
-
-print(age_group(64))
+print(age_group(67676767676767676767676767676767))
 
 
 
@@ -65,6 +68,9 @@ print(age_group(64))
 # - 24 (ans: 96)
 # - 402 (ans: 1608)
 # - 594 (ans: 2376)
+
+
+
 
 # ## Task 4: Sum of squares - Function within a function
 

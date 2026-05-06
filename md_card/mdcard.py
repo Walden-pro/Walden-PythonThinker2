@@ -12,15 +12,21 @@ FPS = 30
 CLASS = "CT06"
 DAY = "WED"
 TIME = "1530"
-STUDENT_NAME = "Z"
+STUDENT_NAME = "Walden"
 image_file_name = f"{CLASS}_{DAY}_{TIME}_{STUDENT_NAME}_mothers_day_animation.mp4"
 
 message = "Happy Mother's Day"
-sub_message = "Thank you for everything!"
+sub_message = """
+Thank you for everything!
+I love you very much!
+You are the best mother ever!
+"""
+
+"Thank you for everything!"
 
 frames = []
 
-font_file = "Montserrat-Regular.ttf"
+font_file = "Montserrat-Black.ttf"
 font_big = ImageFont.truetype(font_file, 50)
 font_small = ImageFont.truetype(font_file, 25)
 
@@ -43,7 +49,7 @@ floating_asset_img = Image.open(
     "floating_asset.png"
 ).convert("RGBA")
 
-floating_asset_img = floating_asset_img.resize((40, 40))
+floating_asset_img = floating_asset_img.resize((70, 70))
 
 
 # MESSAGE IMAGE
@@ -120,13 +126,13 @@ def draw_waterfall(draw, frame):
 
         draw.line(
             (x, y, x, y + 35),
-            fill="#7dd3fc",
+            fill="#95cdf5",
             width=3
         )
 
         draw.ellipse(
             (x - 3, y + 35, x + 3, y + 41),
-            fill="#89caee"
+            fill="#95cdf5"
         )
 
 
@@ -192,7 +198,7 @@ def draw_sliding_message(
     draw.text(
         (text_x, text_y),
         message,
-        fill="#7a1f44",
+        fill="#06d0f9",
         font=font_big
     )
 
@@ -258,8 +264,8 @@ def draw_rotating_pulsing_flower(draw, frame):
 
     rotation = frame * 5
 
-    center_x = WIDTH // 2
-    center_y = 250
+    center_x = WIDTH // 3
+    center_y = 100
 
     for angle in range(0, 360, 45):
 
@@ -277,7 +283,7 @@ def draw_rotating_pulsing_flower(draw, frame):
 
         draw.ellipse(
             (x - 12, y - 12, x + 12, y + 12),
-            fill="#ff8fab"
+            fill="#5486bc"
         )
 
     draw.ellipse(
@@ -304,9 +310,9 @@ def draw_subtitle(draw, frame):
     if frame > 45:
 
         draw.text(
-            (180, 310),
+            (100, 200),
             sub_message,
-            fill="#5c2a3d",
+            fill="#12CD8F",
             font=font_small
         )
 
@@ -316,7 +322,7 @@ for frame in range(FRAMES):
     img = Image.new(
         "RGB",
         (WIDTH, HEIGHT),
-        "#ffd6e8"
+        "#0211103d"
     )
 
     draw = ImageDraw.Draw(img)
